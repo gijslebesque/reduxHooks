@@ -7,12 +7,15 @@ export class Service {
     });
   }
 
-  getUsers() {
-    return this.service.get('/users');
+  async get(route) {
+    try {
+      const result = await this.service.get(`/${route}`);
+      return result.data;
+    } catch (err) {
+      return err;
+    }
   }
-  getPosts() {
-    return this.service.get('/posts');
-  }
+
   getComments(postId) {
     return this.service.get(`/comments?postId=${postId}`);
   }

@@ -14,8 +14,6 @@ export const posts = (state = [], action) => {
     case 'DELETE_POST':
       const posts = [...state];
       return posts.filter(post => post.id !== action.id);
-    case 'USER_POSTS':
-
     default:
       return state;
   }

@@ -3,9 +3,9 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import NavBar from './layout/Navbar';
 import Footer from './layout/Footer';
-import Users from './pages/Users';
-import Posts from './pages/Posts';
-import SingleUser from './pages/SingleUser';
+import Users from './modules/Users';
+import Posts from './modules/Posts';
+import SingleUser from './modules/SingleUser';
 
 import { Service } from './utils/Service';
 
@@ -19,10 +19,10 @@ function App({ setUsers, setPosts }) {
     const service = new Service();
     const fetchData = async () => {
       try {
-        const allUsers = await service.getUsers();
-        const allPosts = await service.getPosts();
-        setUsers(allUsers.data);
-        setPosts(allPosts.data);
+        const allUsers = await service.get('users');
+        const allPosts = await service.get('posts');
+        setUsers(allUsers);
+        setPosts(allPosts);
       } catch (err) {
         setErr(err);
       }
