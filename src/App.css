@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  margin: 50px 0px;
+}
+.delete {
+  cursor: pointer;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.expand {
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 20px;
+}
