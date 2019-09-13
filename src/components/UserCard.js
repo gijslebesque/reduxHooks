@@ -35,7 +35,7 @@ const UserCard = ({ user, i }) => {
           <div className="content">
             {user.company.catchPhrase}
             <br />
-            <time datetTime="2016-1-1">{randomDate()}</time>
+            <time>{randomDate()}</time>
           </div>
         </div>
       </div>

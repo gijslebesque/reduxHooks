@@ -12,7 +12,7 @@ function Users({ setUsers }) {
   };
   return (
     <div className="container">
-      <h1 class="title is-1">Users</h1>
+      <h1 className="title is-1">Users</h1>
       <div className="columns is-multiline">{listUsers()}</div>
     </div>
   );
